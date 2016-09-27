@@ -1,0 +1,12 @@
+.formBody{
+	padding-left: 10%;
+	padding-right: 10%
+	padding-top:10%;
+	padding-bottom:5%;
+	list-style-type:none;	
+}
+
+.formNameInput {
+	width: 20%%;
+	margin-bottom: 2%;
+}
