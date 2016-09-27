@@ -8,67 +8,111 @@
 </head>
 <body>
 
-
+<div class ="bg">
 	<form>
 	<ul class="formBody">
 
 		    <li> 
-		    	<div class="nameHolder">
-			    	<div> First Name </div> <input type="text" class="formNameInput"> </input> 
+		    	<div class="blockDiv">
+			    	<p> First Name </p> <input type="text" class="smallTextInput"> </input> 
+		    	</div>
 
-			    	<div> Last Name </div> <input type="text" class="formNameInput"> </input>
+		    	<div class="blockDiv">
+		    		<p> Last Name </p> <input type="text" class="smallTextInput"> </input>
+		    	</div>
+
+		    </li>
+
+		    <li>
+			    <div class="lineDiv">
+			    	
+			    </div>
+		    </li>
+
+		    <li>
+		    	<div class="blockDiv">
+			    	<p> Email Address </p> <input type="text" class="smallTextInput"> </input> 
+			    </div>
+
+			    <div class="blockDiv">
+			    	<p> Telephone </p> <input type="text" class="smallTextInput"> </input>
 		    	</div>
 		    </li>
 
 		    <li>
-		    	<div class="contactHolder">
-			    	<div> Email Address </div> <input type="text" class="contactInput"> </input> 
-
-			    	<div> Telephone </div> <input type="text" class="contactInput"> </input>
-		    	</div>
+			    <div class="lineDiv">
+			    	</br>
+			    </div>
 		    </li>
+
 
 		    <li> 
 		    	<div class="addressHolder">
-			    	<div> Address </div> 
-			    	<input type="text" class="addressInput"> </input> 
+			    	</br> <p> Address </p> <input type="text" class="longTextInput"> </input> 
 			    </div>
 		    </li> 
 
+		    </br>
+
 		    <li>
-		    	<input type="text" class="formNameInput"> </input>
+		    	<div class="addressHolder">
+		    		<input type="text" class="longTextInput"> </input>
+		    	</div>
 		    </li>
 		    	
 		    <li>
-		    	<div class="countryAndPost">
-		    	<div> Country </div> 
-			    <input type="dropdown" class="formNameInput"> </input> 
 
-			    <div> Postcode </div> 
-			    <input type="text" class="formNameInput"> </input>
+		    	<p> Country </p> 
+			    <select name="county" class="dropdownInput"> 
+				    <option value="dublin">
+				    	Dublin
+				    </option>
+				    <option value="wexford">
+				    	Wexford
+				    </option>
+			    </select> 
+
+			    <p> Postcode </p> 
+			    <input type="text" class="smallTextInput"> </input>
+
 		    </li>
+
+		    </br>
+
+		    </br>
 
 		    <li>
 		    	<div class="check">
-			    	<input type="checkbox" class="calcButton"> Email me on the progress of my merch! </button> 
+			    	<input type="checkbox" class="formCheckbox" name="emailSubscription"> Email me on the progress of my merch! </button> 
 			    </div>
 		    </li>
 
 		    <li> 
 		    	<div class="check">
-		    		<input type="checkbox" class="calcButton"> I accept the terms and conditions </button>
+		    		<input type="checkbox" class="formCheckbox" name="tandcInput"> I accept the terms and conditions </button>
 		    	</div> 
 		    </li>
 
+		    </br>
+
 		    <li>
 		    	<div class="submitCancelButtons">
-		    	<button class="calcButton"> SUBMIT </button> 
-		    	<button class="calcButton"> CANCEL </button> 
+		    		<button class="formButton"> SUBMIT </button> 
+		    	
+		    	</div>
+		    </li>
+
+		    </br>
+
+		    <li>
+		    	<div class="submitCancelButtons">
+		    		<button class="formButton"> CANCEL </button> 
 		    	</div>
 		    </li>
 	</ul>
 	<form>
 
+</div>
 
 </body>
-</html
+</html>

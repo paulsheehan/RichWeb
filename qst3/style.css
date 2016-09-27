@@ -1,12 +1,60 @@
-.formBody{
-	padding-left: 10%;
-	padding-right: 10%
-	padding-top:10%;
-	padding-bottom:5%;
-	list-style-type:none;	
+
+* {
+	font-family: Verdana;
 }
 
-.formNameInput {
-	width: 20%%;
-	margin-bottom: 2%;
+p {
+	margin-bottom: 5px;
+	
+}
+
+ul {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+	background-color: #00b36b;
+	padding-right: 15px;
+	padding-bottom: 20px;
+}
+
+li {
+	display:inline;
+}
+
+.bg {
+	background-color: #ffccf2;
+}
+
+.blockDiv {
+    float:left;
+    margin: auto;
+}
+
+.lineDiv {
+	margin: 15%;
+
+}
+
+.smallTextInput {
+	width:150px;
+	margin-right: 5px;
+
+}
+
+.longTextInput {
+	width:300px;
+	margin-bottom: 1px;
+}
+
+.dropdownInput {
+
+}
+.formCheckbox {
+
+}
+
+.formButton {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;	
+	width: 70%;
+	height: 50px;
 }
