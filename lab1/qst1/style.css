@@ -1,0 +1,12 @@
+* {
+	font-family: Verdana;
+}
+
+.qst1 {
+	width: 100%; height: 100%; margin: auto;
+	position: absolute;
+    top: 0; 
+    left: 5%;
+    bottom: 0; 
+    right: 0;
+}

@@ -62,24 +62,32 @@
 		    	
 		    <li>
 
-		    	<p> Country </p> 
-			    <select name="county" class="dropdownInput"> 
-				    <option value="dublin">
-				    	Dublin
-				    </option>
-				    <option value="wexford">
-				    	Wexford
-				    </option>
-			    </select> 
+		    	<div class="country">
+		    		<p> Country </p> 
+				    <select name="county" class="dropdownInput"> 
+					    <option value="dublin">
+					    	Dublin
+					    </option>
+					    <option value="wexford">
+					    	Wexford
+					    </option>
+				    </select> 
+			    </div>
 
-			    <p> Postcode </p> 
-			    <input type="text" class="smallTextInput"> </input>
+			    <div class="postcode">
+				    <p> Postcode </p> 
+				    <input type="text" class="smallTextInput"> </input>
+			    </div>
 
 		    </li>
 
-		    </br>
-
-		    </br>
+		    <li>
+		    	<p> Create an acount with these details</p>
+		    	<div class="radioInput">
+		    		<input type="radio" name="signup" value="yes"> Create acount for me
+		    		<input type="radio" name="signup" value="no"> I don't want an account
+		    	</div>
+		    </li>
 
 		    <li>
 		    	<div class="check">
@@ -93,7 +101,13 @@
 		    	</div> 
 		    </li>
 
-		    </br>
+
+		    <li>
+		    	<p> Additional comments </p>
+		    	<div>
+					<textarea class="textareaInput" rows="4" cols="36"></textarea>
+		    	</div>
+		    </li>
 
 		    <li>
 		    	<div class="submitCancelButtons">

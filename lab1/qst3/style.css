@@ -30,7 +30,7 @@ li {
 }
 
 .lineDiv {
-	margin: 15%;
+	margin: 11%;
 
 }
 
@@ -56,5 +56,27 @@ li {
 	display: table;   /* Allow the centering to work */
 	margin: 0 auto;	
 	width: 70%;
-	height: 50px;
+	height: 30px;
+}
+
+.country {
+    margin: auto 20px;
+    display: inline-block;
+    margin-bottom: 2%;
+}
+
+.postcode {
+    margin: auto;
+    display: inline-block;
+    margin-bottom: 2%;
+}
+
+.radioInput {
+	margin-bottom: 3%;
+	font-size: 12px;
+}
+
+.textareaInput {
+	resize: none;
+	margin-bottom: 1%;
 }
