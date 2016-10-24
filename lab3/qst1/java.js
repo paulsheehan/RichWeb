@@ -1,5 +1,8 @@
 let controller = [0,0,'+'];
 
+let accumulatedTotal = 0;
+let calculatorNumber = [];
+
 const init = () => {
 	let buttons = document.getElementsByClassName("flex-item");
 	
@@ -11,11 +14,11 @@ const init = () => {
 
 const calcOperation = (operator) => {
 
-	console.log(operator);
-	
+	//console.log(operator);
+
 		switch(operator) {
 			case '+':
-				console.log(operator);
+				updateController();
 				break;
 			case '-':
 				console.log(operator);
@@ -26,20 +29,59 @@ const calcOperation = (operator) => {
 			case 'X':
 				console.log(operator);
 				break;
+			//calls updateController()
 			case 'C':
 				updateController(0,0,'+');
 				console.log(operator);
 				break;
+			case '±':
+				console.log(operator);
+				break;
+			case '(':
+				console.log(operator);
+				break;
+			case ')':
+				console.log(operator);
+				break;
+			case '=':
+				printCalculatorNumber();
+				printAcumulatedNumber();
+				break;
+			default:
+				updateCalculatorNumber(operator);
+				break;		
 		}
 		
 };
 
-const updateController = (x, y, z) =>{
-	controller[0]=x;
-	controller[1]=y;
-	controller[2]=z;
+//turns the accumulatedTotal array of input numbers into a total integer when the user clicks "+"
+const intifyCalculatorNumber = () => {
+
+	let intCalculatorNumber = 0;
+
+	for(let i = 0; i < calculatorNumber.length; i++)
+	{
+		//total = (X*10) + calculatorNumber
+		intCalculatorNumber = (calculatorNumber[i]*10) + intCalculatorNumber;
+	
+	} 
+	console.log(intCalculatorNumber);
+	return intCalculatorNumber;
 };
 
-const printController = () =>{
-	console.log(controller);
+//initiates the process of turning the users input number to an integer to store in the calculator
+const updateController = () =>{
+	accumulatedTotal = intifyCalculatorNumber();
+};
+
+const updateCalculatorNumber = (x) => {
+	calculatorNumber.push(x);
+}
+
+const printCalculatorNumber = () =>{
+	console.log(calculatorNumber);
+};
+
+const printAcumulatedNumber = () =>{
+	console.log(accumulatedTotal);
 };
