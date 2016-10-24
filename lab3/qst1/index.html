@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="java.js"></script>
+</head>
+<body>
+  <div id="calculator">
+    <input type="text" placeholder="0" value=controller>
+    <div class="flex-container">
+      <button class="flex-item">(</button>
+      <button class="flex-item">)</button>
+      <button class="flex-item">±</button>
+      <button class="flex-item">÷</button>
+      <button class="flex-item">7</button>
+      <button class="flex-item">8</button>
+      <button class="flex-item">9</button>
+      <button class="flex-item">x</button>
+      <button class="flex-item">4</button>
+      <button class="flex-item">5</button>
+      <button class="flex-item" id="six">6</button>
+        <script type="text/javascript">
+          document.getElementById("six").onclick = function () { printController(); };
+        </script>
+      <button class="flex-item" id="minus">-</button>
+        <script type="text/javascript">
+          document.getElementById("minus").onclick = function () { updateController(); };
+        </script>
+      <button class="flex-item">1</button>
+      <button class="flex-item">2</button>
+      <button class="flex-item">3</button>
+      <button class="flex-item">+</button>
+      <button class="flex-item">0</button>
+      <button class="flex-item">.</button>
+      <button class="flex-item">C</button>
+      <button class="flex-item" id="equals">=</button>
+      <script type="text/javascript">
+        document.getElementById("equals").onclick = function () { calcOperation(1,2,'+') };
+      </script>
+    </div>
+  </div>
+</body>
+</html>
