@@ -23,23 +23,17 @@
       <button class="flex-item">5</button>
       <button class="flex-item" id="six">6</button>
         <script type="text/javascript">
-          document.getElementById("six").onclick = function () { printController(); };
+          document.getElementById("six").onclick = function () { init(); };
         </script>
       <button class="flex-item" id="minus">-</button>
-        <script type="text/javascript">
-          document.getElementById("minus").onclick = function () { updateController(); };
-        </script>
       <button class="flex-item">1</button>
       <button class="flex-item">2</button>
       <button class="flex-item">3</button>
       <button class="flex-item">+</button>
       <button class="flex-item">0</button>
       <button class="flex-item">.</button>
-      <button class="flex-item">C</button>
+      <button class="flex-item" id="cancel">C</button>
       <button class="flex-item" id="equals">=</button>
-      <script type="text/javascript">
-        document.getElementById("equals").onclick = function () { calcOperation(1,2,'+') };
-      </script>
     </div>
   </div>
 </body>

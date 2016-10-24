@@ -1,7 +1,18 @@
-let controller = [1,2,'+'];
+let controller = [0,0,'+'];
 
-const calcOperation = (x,y,operator) => {
+const init = () => {
+	let buttons = document.getElementsByClassName("flex-item");
+	
+	for (let i = 0; i < buttons.length; i++) {
+		buttons[i].onclick = function () { calcOperation(buttons[i].innerHTML); };
+		//calcOperation('buttons[i].innerHTML');
+	};
+};
 
+const calcOperation = (operator) => {
+
+	console.log(operator);
+	
 		switch(operator) {
 			case '+':
 				console.log(operator);
@@ -15,14 +26,18 @@ const calcOperation = (x,y,operator) => {
 			case 'X':
 				console.log(operator);
 				break;
+			case 'C':
+				updateController(0,0,'+');
+				console.log(operator);
+				break;
 		}
 		
 };
 
-const updateController = () =>{
-	controller[0]=5;
-	controller[1]=4;
-	controller[2]='-';
+const updateController = (x, y, z) =>{
+	controller[0]=x;
+	controller[1]=y;
+	controller[2]=z;
 };
 
 const printController = () =>{
