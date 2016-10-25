@@ -8,8 +8,16 @@
   <script type="text/javascript" src="java.js"></script>
 </head>
 <body>
+
+  <button id="startButton"> Press Me to Start </button>
+  
+  <script type="text/javascript"> 
+  let startButton = document.getElementById('startButton'); 
+  startButton.addEventListener('click', function() {init();});
+  </script>
+
   <div id="calculator">
-    <input type="text" placeholder="0" value=controller>
+    <input type="text" id="calcScreen">
     <div class="flex-container">
       <button class="flex-item">(</button>
       <button class="flex-item">)</button>
@@ -36,5 +44,9 @@
       <button class="flex-item" id="equals">=</button>
     </div>
   </div>
+  <script type="text/javascript">
+    let calculator = document.getElementById("calculator");
+    calculator.setAttribute("style", "visibility: hidden;");
+  </script>
 </body>
 </html>
