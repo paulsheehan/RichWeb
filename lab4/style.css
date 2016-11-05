@@ -1,0 +1,58 @@
+p {
+	font-size: 20px;
+}
+
+body {
+	width: 8
+	0%;
+	margin: auto;
+}
+#username {
+	flex-grow: 1;
+	width:50%;
+	height: 30px;
+}
+
+#search {
+	width: 10%;
+	height: 30px;
+	border-radius: 10px;
+}
+
+#main-body {
+	width:800px;
+	margin:0 auto;
+}
+
+#left-column {
+	float:left;
+    width: 350px;
+
+}
+
+#right-column {
+	width: 350px;
+	float:right;
+}
+
+.left-column-item {
+	font-size: 20px;
+	border: 1px solid black;
+}
+
+.right-column-item {
+	font-size: 20px;
+	border: 1px solid black;
+
+}
+
+#image-container {
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+}
+
+#profilePicture {
+	width: 100%;
+    height: auto;
+}
