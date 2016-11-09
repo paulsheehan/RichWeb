@@ -9,13 +9,16 @@
 </head>
 <body>
 
-<form id="submitSearch">
-	<div id="flex-container">
-  		<input type="text" name="username" placeholder="Username" id="username"><br>
-  		<input type="button" value="Search" id="search" onclick="test()">
-	</div>
+<div id="browSpace">
 
-</form>
+</div>
+
+<div id="submitSearch">
+		<form>
+		  		<input type="text" name="username" placeholder="Username" id="username"><br>
+		  		<input type="button" value="Search" id="search" onclick="start()">
+		</form>
+</div>
 
 <div id="main-body">
 	<div id="left-column">
@@ -35,11 +38,20 @@
 
 	<div id="right-column">
 		<p> User Repos </p>
-		<h1 class="right-column-item"> Name </h1>
-		<h1 class="right-column-item"> Username </h1>
-		<h1 class="right-column-item"> Email </h1>
-		<h1 class="right-column-item"> Location </h1>
-		<h1 class="right-column-item"> Number of Gists </h1>
+		<div id="tempColumn">
+			<h1 class="temp-column-item"> Name </h1>
+			<h1 class="temp-column-item"> Description </h1>
+			<h1 class="temp-column-item"> Name </h1>
+			<h1 class="temp-column-item"> Description </h1>
+			<h1 class="temp-column-item"> Name </h1>
+			<h1 class="temp-column-item"> Description </h1>
+			<h1 class="temp-column-item"> Name </h1>
+			<h1 class="temp-column-item"> Description </h1>
+			<h1 class="temp-column-item"> Name </h1>
+			<h1 class="temp-column-item"> Description </h1>
+			<h1 class="temp-column-item"> Name </h1>
+			<h1 class="temp-column-item"> Description </h1>
+		</div>
 	</div>
 </div>
 

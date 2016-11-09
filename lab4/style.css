@@ -1,49 +1,78 @@
+* {
+	font-size: 16px;
+}
+
 p {
 	font-size: 20px;
 }
 
 body {
-	width: 8
-	0%;
+	width: 90%;
 	margin: auto;
+	background-color: #ccccff;
 }
+
+#browSpace {
+	height: 15px;
+}
+
+#submitSearch {
+	width: 1000px;
+	height: 50px;
+	position: relative;
+	margin:0 auto;
+}
+
 #username {
-	flex-grow: 1;
-	width:50%;
+	width:600px;
 	height: 30px;
+	position: absolute;
+	left: 0;
 }
 
 #search {
-	width: 10%;
-	height: 30px;
+	width: 200px;
+	height: 35px;
 	border-radius: 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
 #main-body {
-	width:800px;
+	width:1000px;
 	margin:0 auto;
 }
 
 #left-column {
 	float:left;
-    width: 350px;
-
+    width: 400px;
+    height: auto;
 }
 
 #right-column {
-	width: 350px;
+	width: 500px;
+	height: 100px;
 	float:right;
 }
 
 .left-column-item {
-	font-size: 20px;
 	border: 1px solid black;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .right-column-item {
-	font-size: 20px;
 	border: 1px solid black;
+	margin-top: 0;
+	margin-bottom: 0;
+}
 
+.temp-column-item {
+	border: 1px solid black;
+	height: 25px;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 #image-container {
@@ -55,4 +84,9 @@ body {
 #profilePicture {
 	width: 100%;
     height: auto;
+}
+
+#error-message {
+	padding-top: 10px;
+	color: red;
 }
