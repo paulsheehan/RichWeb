@@ -43,7 +43,7 @@ const fetchGit = (endpoint, content) => {
 				if (content === "u") {
 					buildUser(data);
 				} else {
-					buildRepo(data);
+					buildEachRepo(data);
 				}
 			});
 		}else {
@@ -71,6 +71,14 @@ const buildUser = (gUser) => {
 
 	let leftColumnElements = document.getElementsByClassName("left-column-item");
 
+	//Empty text each search in order to clear previous text
+	leftColumnElements[0].textContent = "Name ";
+	leftColumnElements[1].textContent = "Username ";
+	leftColumnElements[2].textContent = "Email ";
+	leftColumnElements[3].textContent = "Location ";
+	leftColumnElements[4].textContent = "Number of Gists "
+
+	//fil DOM elements
 	leftColumnElements[0].textContent = leftColumnElements[0].textContent.concat(gUser.name);
 	leftColumnElements[1].textContent = leftColumnElements[1].textContent.concat(gUser.login);
 	leftColumnElements[2].textContent = leftColumnElements[2].textContent.concat(gUser.location);
@@ -79,21 +87,21 @@ const buildUser = (gUser) => {
 };
 
 //applies github repo data to the DOM
-const buildRepo = (gRepo) => {
+const buildEachRepo = (gRepo) => {
 	let tempColumn = document.getElementById("tempColumn");
 	let rightColumnDiv = document.getElementById("right-column");
 
-	//hide the original empty div
-	tempColumn.setAttribute("style", "visibility: hidden; position:absolute");
+	//remove any data that already exsists in the DOM from previous searches
+	removeEachRepo(rightColumnDiv);
 
 	//populate new div with repo data
 	for (repo in gRepo) {
-		rightColumnDiv.append(buildEachRepo(gRepo[repo].name, gRepo[repo].description));
+		rightColumnDiv.append(buildRepo(gRepo[repo].name, gRepo[repo].description));
 	}
 };
 
 //foreach repo make an element
-const buildEachRepo = (name, desc) => {
+const buildRepo = (name, desc) => {
 
 	//name
 	let nameEl = document.createElement("h1");
@@ -109,6 +117,15 @@ const buildEachRepo = (name, desc) => {
 	return nameEl;
 };
 
+const removeEachRepo = (repo) => {
+
+	//remove all childNodes of right-column
+	for(let i = repo.childNodes.length-1; i > 2; i--) {
+		repo.removeChild(repo.childNodes[i]);
+	}
+	
+};
+
 //add error message to the DOM
 const makeNotFoundError = () => {
 	let errMessage = "User could not be found on GitHub";
@@ -119,7 +136,7 @@ const makeNotFoundError = () => {
 
 	let headerEl = document.getElementById("submitSearch");
 	headerEl.append(errEl);
-}
+};
 
 //remove error message from the DOM
 const removeErr = () => {
@@ -127,4 +144,4 @@ const removeErr = () => {
 	let errEl = document.getElementById("error-message");
 
 	headerEl.removeChild(errEl);
-}
+};
